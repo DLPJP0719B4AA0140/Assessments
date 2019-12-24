@@ -1,0 +1,95 @@
+Execution.java
+
+
+import java.util.Scanner;
+public class Execution {
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+String ogString, revString, lowerOgString;
+System.out.println("Enter a string");
+ogString=sc.nextLine();
+Reverse r=new Reverse();
+revString=r.getReverse(ogString);
+System.out.println("Reverse is "+revString);
+Words w=new Words();
+int numWords=w.countWords(ogString);
+System.out.println("Number of words are "+numWords);
+lowerOgString=ogString.toLowerCase();
+Vowels v=new Vowels();
+int numVowels=v.countVowels(lowerOgString);
+System.out.println("Number of vowels are "+numVowels);
+}
+
+}
+
+
+
+Reverse.java
+
+
+public class Reverse {
+String reverse="";
+public String getReverse(String ogString){
+for(int i = ogString.length() - 1; i >= 0; i--)
+        {
+            reverse = reverse + ogString.charAt(i);
+        }
+return reverse;
+}
+
+}
+
+
+
+
+
+
+Words.java
+
+
+public class Words {  
+   static int countWords(String ogString)
+   {
+       int state = 0;
+       int wc = 0;
+       int i = 0;
+         
+       while (i < ogString.length())
+       {
+             
+            if (ogString.charAt(i) == ' ' || ogString.charAt(i) == '\n'
+                   || ogString.charAt(i) == '\t')
+               state = 0;
+            else if (state == 0)
+           {
+               state = 1;
+               ++wc;
+           }
+     
+           ++i;
+       }
+       return wc;
+}
+
+}
+
+
+
+
+
+
+Vowels.java
+
+
+public class Vowels {
+int count=0;
+public int countVowels(String lowerOgString){
+for(int i = lowerOgString.length() - 1; i >= 0; i--){
+if(lowerOgString.charAt(i)=='a'|| lowerOgString.charAt(i)=='e'|| lowerOgString.charAt(i)=='i'|| lowerOgString.charAt(i)=='o'|| lowerOgString.charAt(i)=='u'){
+count=count+1;
+}
+}
+return count;
+}
+
+}
