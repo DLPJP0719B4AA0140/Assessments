@@ -17,9 +17,9 @@ public class CustomerApp {
 			System.out.println("You logged in Successfully");
 			
 			Customer[] customers = new Customer[10];
-			customers[0] = new Customer(1001,"Bhakti","bhakti10gmail.com",123);
-			customers[1] = new Customer(1002,"Harsh","harsh15gmail.com",456);
-			customers[2] = new Customer(1003,"Prerit","prerit17gmail.com",789);
+			customers[0] = new Customer(1001,"Aakash","bhakti10gmail.com",123);
+			customers[1] = new Customer(1002,"Ankit","harsh15gmail.com",456);
+			customers[2] = new Customer(1003,"Abdul","prerit17gmail.com",789);
 			customers[3] = null;
 			customers[4] = null;
 			customers[5] = null;
